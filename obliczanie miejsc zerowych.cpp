@@ -11,8 +11,15 @@ int main()
 	cin >> b;
 	cout << endl;
 	cout << "Funckja ma postac " << a <<"x + " << b << " = 0" << endl;  
-	x = b/a ;
+	if (a==0)
+	{
+		cout << "Brak miejsc zerowych funkcji ";
+	}
+	else if(a!=0 || b!=0)
+	{
+	 x=b/a ;	
+		cout << "Miejsce zerowe danej funkcji to " << x ;
+	}
 	
-	cout << "Miejsce zerowe danej funkcji to " << x ;
 	return 0;
 }

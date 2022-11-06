@@ -10,7 +10,8 @@ int main()
 	cout << "-----------------------------------------------------------------" << endl;
 	cout << "Wybierz rodzaj funckji z ktorej ma byc obliczone miejsce zerowe" << endl;
 	cout << "1: Funkcja liniowa" << endl;
-	cout << "2: Funckja kwadratowa" << endl;
+	cout << "2: Funckja kwadratowa w postaci Ax^2 + Bx + C  = 0 " << endl;
+	cout << "3: Funkcja kwadratowa w postaci (ax-P)^2 + Q " << endl;
 	cout << "-----------------------------------------------------------------" << endl;
 	cout << "-----------------------------------------------------------------" << endl;
 
@@ -97,17 +98,20 @@ int main()
 			cout << "a rozne od 0 , jest to funkcja liniowa" << endl;
 		}
 	}
+	else
+	{
+		cout << "Obliczanie miejsc zerowych funkcji kwadratowej w postaci (ax-P)^2 + Q" << endl;
+		cout << "Podaj wartosc k : " << endl;
+		cin >> a;
+		cout << "Podaj wartosc p : " << endl;
+		cin >> p;
+		cout << "Podaj wartosc q : " << endl;
+		cin >> q;
+		b = 2 * a * p;
+		c = p * p + q;
+		goto oblicz;
+	}
 
-	cout << "Obliczanie miejsc zerowych funkcji kwadratowej w postaci (ax-P)^2 + Q" << endl;
-	cout << "Podaj wartosc k : " << endl;
-	cin >> a;
-	cout << "Podaj wartosc p : " << endl;
-	cin >> p;
-	cout << "Podaj wartosc q : " << endl;
-	cin >> q;
-	b = 2 * a * p;
-	c = p * p + q;
-	goto oblicz;
 
 
 		

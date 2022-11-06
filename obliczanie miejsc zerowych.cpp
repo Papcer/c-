@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
 	int wybor;
-	double a,b,x,c,q,w;
+	double a,b,x,c,q,w,p;
 	double delta=0, x1=0, x2=0;
 	cout << "-----------------------------------------------------------------" << endl;
 	cout << "-----------------------------------------------------------------" << endl;
@@ -73,6 +73,7 @@ int main()
 		cout << endl;
 		cout << "Funckja ma postac " << a << "x^2 + " << b << "x +" << c << " = 0" << endl;
 
+		oblicz:
 		if (a != 0)
 		{
 			delta = (b * b) - 4 * a * c;
@@ -96,6 +97,17 @@ int main()
 			cout << "a rozne od 0 , jest to funkcja liniowa" << endl;
 		}
 	}
+
+	cout << "Obliczanie miejsc zerowych funkcji kwadratowej w postaci (ax-P)^2 + Q" << endl;
+	cout << "Podaj wartosc k : " << endl;
+	cin >> a;
+	cout << "Podaj wartosc p : " << endl;
+	cin >> p;
+	cout << "Podaj wartosc q : " << endl;
+	cin >> q;
+	b = 2 * a * p;
+	c = p * p + q;
+	goto oblicz;
 
 
 		

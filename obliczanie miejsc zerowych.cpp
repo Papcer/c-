@@ -6,9 +6,11 @@ int main()
 	int wybor;
 	double a,b,x,c,q,w;
 	double delta=0, x1=0, x2=0;
-	cout << "Wybierz rodzaj funckji" << endl;
+	cout << "-----------------------------------------------------------------" << endl;
+	cout << "Wybierz rodzaj funckji z ktorej ma byc obliczone miejsce zerowe" << endl;
 	cout << "1: Funkcja liniowa" << endl;
 	cout << "2: Funckja kwadratowa" << endl;
+	cout << "-----------------------------------------------------------------" << endl;
 	cin >> wybor;
 	
 	if (wybor == 1)

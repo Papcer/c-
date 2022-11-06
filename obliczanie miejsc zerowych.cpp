@@ -59,7 +59,6 @@ int main()
 	else if (wybor == 2)
 	{
 		cout << "Obliczanie miejsc zerowych funkcji Ax^2 + Bx + C  = 0" << endl;
-		cout << "wartoœæ parametru a musi byæ ró¿na od 0" << endl ;
 		cout << "Podaj a ";
 		cin >> a;
 		cout << "Podaj b ";
@@ -69,20 +68,27 @@ int main()
 		cout << endl;
 		cout << "Funckja ma postac " << a << "x^2 + " << b << "x +" << c << " = 0" << endl;
 
-		delta = (b * b) - 4 * a * c;
-		cout << "Delta = " << delta << endl;
-		if (delta > 0)
+		if (a != 0)
 		{
-			x1 = (-1 * b - sqrt(delta)) / (2 * a);
-			x2 = (-1 * b + sqrt(delta)) / (2 * a);
-			cout << "Pierwsze miejsce zerowe: " << x1 << endl;
-			cout << "Drugie miejsce zerowe: " << x2 << endl;
+			delta = (b * b) - 4 * a * c;
+			cout << "Delta = " << delta << endl;
+			if (delta > 0)
+			{
+				x1 = (-1 * b - sqrt(delta)) / (2 * a);
+				x2 = (-1 * b + sqrt(delta)) / (2 * a);
+				cout << "Pierwsze miejsce zerowe: " << x1 << endl;
+				cout << "Drugie miejsce zerowe: " << x2 << endl;
+			}
+			else if (delta == 0) {
+				x1 = (-1 * b) / (2 * a);
+			}
+			else {
+				cout << "Brak miejsce zerowych: ";
+			}
 		}
-		else if (delta == 0) {
-			x1 = (- 1 * b) / (2 * a);
-		}
-		else {
-			cout << "Brak miejsce zerowych: ";
+		else
+		{
+			cout << "a rozne od 0 , jest to funkcja liniowa" << endl;
 		}
 	}
 
